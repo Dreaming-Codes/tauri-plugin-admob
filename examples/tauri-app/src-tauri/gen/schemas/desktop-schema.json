@@ -396,12 +396,6 @@
           ]
         },
         {
-          "type": "string",
-          "enum": [
-            "devtools:default"
-          ]
-        },
-        {
           "description": "event:default -> Default permissions for the plugin.",
           "type": "string",
           "enum": [

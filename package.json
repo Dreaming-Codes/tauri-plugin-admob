@@ -23,13 +23,13 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": ">=2.0.0-beta.6"
+    "@tauri-apps/api": "^2.0.0-beta.15"
   },
   "devDependencies": {
     "@tauri-apps/cli": "next",
     "@rollup/plugin-typescript": "^11.1.6",
-    "rollup": "^4.9.6",
-    "typescript": "^5.3.3",
-    "tslib": "^2.6.2"
+    "rollup": "^4.18.1",
+    "typescript": "^5.5.3",
+    "tslib": "^2.6.3"
   }
 }

@@ -295,17 +295,129 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-ping -> Enables the ping command without any pre-configured scope.",
+          "description": "allow-adCreate -> Enables the adCreate command without any pre-configured scope.",
           "type": "string",
           "enum": [
-            "allow-ping"
+            "allow-adCreate"
           ]
         },
         {
-          "description": "deny-ping -> Denies the ping command without any pre-configured scope.",
+          "description": "deny-adCreate -> Denies the adCreate command without any pre-configured scope.",
           "type": "string",
           "enum": [
-            "deny-ping"
+            "deny-adCreate"
+          ]
+        },
+        {
+          "description": "allow-adHide -> Enables the adHide command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-adHide"
+          ]
+        },
+        {
+          "description": "deny-adHide -> Denies the adHide command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-adHide"
+          ]
+        },
+        {
+          "description": "allow-adIsLoaded -> Enables the adIsLoaded command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-adIsLoaded"
+          ]
+        },
+        {
+          "description": "deny-adIsLoaded -> Denies the adIsLoaded command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-adIsLoaded"
+          ]
+        },
+        {
+          "description": "allow-adLoad -> Enables the adLoad command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-adLoad"
+          ]
+        },
+        {
+          "description": "deny-adLoad -> Denies the adLoad command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-adLoad"
+          ]
+        },
+        {
+          "description": "allow-adShow -> Enables the adShow command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-adShow"
+          ]
+        },
+        {
+          "description": "deny-adShow -> Denies the adShow command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-adShow"
+          ]
+        },
+        {
+          "description": "allow-configRequest -> Enables the configRequest command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-configRequest"
+          ]
+        },
+        {
+          "description": "deny-configRequest -> Denies the configRequest command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-configRequest"
+          ]
+        },
+        {
+          "description": "allow-configure -> Enables the configure command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-configure"
+          ]
+        },
+        {
+          "description": "deny-configure -> Denies the configure command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-configure"
+          ]
+        },
+        {
+          "description": "allow-requestTrackingAuthorization -> Enables the requestTrackingAuthorization command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-requestTrackingAuthorization"
+          ]
+        },
+        {
+          "description": "deny-requestTrackingAuthorization -> Denies the requestTrackingAuthorization command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-requestTrackingAuthorization"
+          ]
+        },
+        {
+          "description": "allow-trackingAuthorizationStatus -> Enables the trackingAuthorizationStatus command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-trackingAuthorizationStatus"
+          ]
+        },
+        {
+          "description": "deny-trackingAuthorizationStatus -> Denies the trackingAuthorizationStatus command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-trackingAuthorizationStatus"
           ]
         },
         {

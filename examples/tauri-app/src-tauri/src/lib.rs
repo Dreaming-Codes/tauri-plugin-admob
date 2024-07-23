@@ -6,7 +6,12 @@ fn greet(name: &str) -> String {
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-    tauri::Builder::default()
+    #[cfg(debug_assertions)]
+    let builder = tauri::Builder::default().plugin(tauri_plugin_devtools::init());
+    #[cfg(not(debug_assertions))]
+    let builder = tauri::Builder::default();
+
+    builder
         .invoke_handler(tauri::generate_handler![greet])
         .plugin(tauri_plugin_admob::init())
         .run(tauri::generate_context!())

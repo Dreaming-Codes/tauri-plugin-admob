@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-requestTrackingAuthorization"
+description = "Enables the requestTrackingAuthorization command without any pre-configured scope."
+commands.allow = ["requestTrackingAuthorization"]
+
+[[permission]]
+identifier = "deny-requestTrackingAuthorization"
+description = "Denies the requestTrackingAuthorization command without any pre-configured scope."
+commands.deny = ["requestTrackingAuthorization"]

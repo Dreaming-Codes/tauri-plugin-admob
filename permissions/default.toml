@@ -1,3 +1,3 @@
 [default]
 description = "Default permissions for the plugin"
-permissions = ["allow-ping"]
+permissions = ["allow-adCreate", "allow-adHide", "allow-adIsLoaded", "allow-adLoad", "allow-adShow", "allow-configRequest", "allow-configure", "allow-requestTrackingAuthorization", "allow-trackingAuthorizationStatus"]

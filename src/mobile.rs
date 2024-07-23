@@ -4,8 +4,6 @@ use tauri::{
   AppHandle, Runtime,
 };
 
-use crate::models::*;
-
 #[cfg(target_os = "android")]
 const PLUGIN_IDENTIFIER: &str = "com.plugin.admob";
 
@@ -27,11 +25,4 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 /// Access to the admob APIs.
 pub struct Admob<R: Runtime>(PluginHandle<R>);
 
-impl<R: Runtime> Admob<R> {
-  pub fn ping(&self, payload: PingRequest) -> crate::Result<PingResponse> {
-    self
-      .0
-      .run_mobile_plugin("ping", payload)
-      .map_err(Into::into)
-  }
-}
+impl<R: Runtime> Admob<R> {}

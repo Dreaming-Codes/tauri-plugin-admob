@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-adIsLoaded"
+description = "Enables the adIsLoaded command without any pre-configured scope."
+commands.allow = ["adIsLoaded"]
+
+[[permission]]
+identifier = "deny-adIsLoaded"
+description = "Denies the adIsLoaded command without any pre-configured scope."
+commands.deny = ["adIsLoaded"]

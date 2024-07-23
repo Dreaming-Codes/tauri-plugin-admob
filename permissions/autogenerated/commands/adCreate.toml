@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-adCreate"
+description = "Enables the adCreate command without any pre-configured scope."
+commands.allow = ["adCreate"]
+
+[[permission]]
+identifier = "deny-adCreate"
+description = "Denies the adCreate command without any pre-configured scope."
+commands.deny = ["adCreate"]

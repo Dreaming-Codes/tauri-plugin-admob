@@ -2,7 +2,15 @@
 
 Default permissions for the plugin
 
-- `allow-ping`
+- `allow-adCreate`
+- `allow-adHide`
+- `allow-adIsLoaded`
+- `allow-adLoad`
+- `allow-adShow`
+- `allow-configRequest`
+- `allow-configure`
+- `allow-requestTrackingAuthorization`
+- `allow-trackingAuthorizationStatus`
 
 ### Permission Table 
 
@@ -16,12 +24,12 @@ Default permissions for the plugin
 <tr>
 <td>
 
-`admob:allow-ping`
+`admob:allow-adCreate`
 
 </td>
 <td>
 
-Enables the ping command without any pre-configured scope.
+Enables the adCreate command without any pre-configured scope.
 
 </td>
 </tr>
@@ -29,12 +37,220 @@ Enables the ping command without any pre-configured scope.
 <tr>
 <td>
 
-`admob:deny-ping`
+`admob:deny-adCreate`
 
 </td>
 <td>
 
-Denies the ping command without any pre-configured scope.
+Denies the adCreate command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-adHide`
+
+</td>
+<td>
+
+Enables the adHide command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-adHide`
+
+</td>
+<td>
+
+Denies the adHide command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-adIsLoaded`
+
+</td>
+<td>
+
+Enables the adIsLoaded command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-adIsLoaded`
+
+</td>
+<td>
+
+Denies the adIsLoaded command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-adLoad`
+
+</td>
+<td>
+
+Enables the adLoad command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-adLoad`
+
+</td>
+<td>
+
+Denies the adLoad command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-adShow`
+
+</td>
+<td>
+
+Enables the adShow command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-adShow`
+
+</td>
+<td>
+
+Denies the adShow command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-configRequest`
+
+</td>
+<td>
+
+Enables the configRequest command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-configRequest`
+
+</td>
+<td>
+
+Denies the configRequest command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-configure`
+
+</td>
+<td>
+
+Enables the configure command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-configure`
+
+</td>
+<td>
+
+Denies the configure command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-requestTrackingAuthorization`
+
+</td>
+<td>
+
+Enables the requestTrackingAuthorization command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-requestTrackingAuthorization`
+
+</td>
+<td>
+
+Denies the requestTrackingAuthorization command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-trackingAuthorizationStatus`
+
+</td>
+<td>
+
+Enables the trackingAuthorizationStatus command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-trackingAuthorizationStatus`
+
+</td>
+<td>
+
+Denies the trackingAuthorizationStatus command without any pre-configured scope.
 
 </td>
 </tr>

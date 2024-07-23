@@ -179,17 +179,129 @@
           ]
         },
         {
-          "description": "admob:allow-ping -> Enables the ping command without any pre-configured scope.",
+          "description": "admob:allow-adCreate -> Enables the adCreate command without any pre-configured scope.",
           "type": "string",
           "enum": [
-            "admob:allow-ping"
+            "admob:allow-adCreate"
           ]
         },
         {
-          "description": "admob:deny-ping -> Denies the ping command without any pre-configured scope.",
+          "description": "admob:allow-adHide -> Enables the adHide command without any pre-configured scope.",
           "type": "string",
           "enum": [
-            "admob:deny-ping"
+            "admob:allow-adHide"
+          ]
+        },
+        {
+          "description": "admob:allow-adIsLoaded -> Enables the adIsLoaded command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:allow-adIsLoaded"
+          ]
+        },
+        {
+          "description": "admob:allow-adLoad -> Enables the adLoad command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:allow-adLoad"
+          ]
+        },
+        {
+          "description": "admob:allow-adShow -> Enables the adShow command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:allow-adShow"
+          ]
+        },
+        {
+          "description": "admob:allow-configRequest -> Enables the configRequest command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:allow-configRequest"
+          ]
+        },
+        {
+          "description": "admob:allow-configure -> Enables the configure command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:allow-configure"
+          ]
+        },
+        {
+          "description": "admob:allow-requestTrackingAuthorization -> Enables the requestTrackingAuthorization command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:allow-requestTrackingAuthorization"
+          ]
+        },
+        {
+          "description": "admob:allow-trackingAuthorizationStatus -> Enables the trackingAuthorizationStatus command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:allow-trackingAuthorizationStatus"
+          ]
+        },
+        {
+          "description": "admob:deny-adCreate -> Denies the adCreate command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-adCreate"
+          ]
+        },
+        {
+          "description": "admob:deny-adHide -> Denies the adHide command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-adHide"
+          ]
+        },
+        {
+          "description": "admob:deny-adIsLoaded -> Denies the adIsLoaded command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-adIsLoaded"
+          ]
+        },
+        {
+          "description": "admob:deny-adLoad -> Denies the adLoad command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-adLoad"
+          ]
+        },
+        {
+          "description": "admob:deny-adShow -> Denies the adShow command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-adShow"
+          ]
+        },
+        {
+          "description": "admob:deny-configRequest -> Denies the configRequest command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-configRequest"
+          ]
+        },
+        {
+          "description": "admob:deny-configure -> Denies the configure command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-configure"
+          ]
+        },
+        {
+          "description": "admob:deny-requestTrackingAuthorization -> Denies the requestTrackingAuthorization command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-requestTrackingAuthorization"
+          ]
+        },
+        {
+          "description": "admob:deny-trackingAuthorizationStatus -> Denies the trackingAuthorizationStatus command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-trackingAuthorizationStatus"
           ]
         },
         {
@@ -281,6 +393,12 @@
           "type": "string",
           "enum": [
             "app:deny-version"
+          ]
+        },
+        {
+          "type": "string",
+          "enum": [
+            "devtools:default"
           ]
         },
         {

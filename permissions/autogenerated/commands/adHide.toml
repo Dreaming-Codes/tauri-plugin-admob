@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-adHide"
+description = "Enables the adHide command without any pre-configured scope."
+commands.allow = ["adHide"]
+
+[[permission]]
+identifier = "deny-adHide"
+description = "Denies the adHide command without any pre-configured scope."
+commands.deny = ["adHide"]
