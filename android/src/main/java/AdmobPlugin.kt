@@ -21,7 +21,6 @@ import org.json.JSONObject
 
 @InvokeArg
 class InvokeArgs {
-    var payload: JSObject? = null
     var ctx: String? = null
     var adUnitId: String? = null
     var appMuted: Boolean? = null
