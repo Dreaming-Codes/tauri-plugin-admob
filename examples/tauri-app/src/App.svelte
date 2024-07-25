@@ -11,6 +11,7 @@
     async function _ping() {
         const banner = new BannerAd({
             adUnitId: 'ca-app-pub-3940256099942544/9214589741',
+            position: 'top',
         });
         await banner.load();
         await banner.show();
