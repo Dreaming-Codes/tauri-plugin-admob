@@ -84,7 +84,7 @@ class Helper(private val plugin: AdmobPlugin) {
 
         @JvmStatic
         fun getParentView(view: View?): ViewGroup? {
-            return if (view == null) null else view.parent as ViewGroup
+            return if (view == null) null else view.parent as ViewGroup?
         }
 
         @JvmStatic

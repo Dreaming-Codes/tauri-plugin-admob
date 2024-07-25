@@ -21,7 +21,8 @@ import org.json.JSONObject
 
 @InvokeArg
 class InvokeArgs {
-    var ctx: String? = null
+    var cls: String? = null
+    val id: Int? = null
     var adUnitId: String? = null
     var appMuted: Boolean? = null
     var appVolume: Float? = null
@@ -86,13 +87,9 @@ class AdmobPlugin(var activity: Activity) : Plugin(activity) {
     }
 
     @Command
-    fun adCreate(call: Invoke) {
-        println("adCreate 1 ${call.parseArgs(InvokeArgs::class.java).ctx} ${call.parseArgs(JSObject::class.java).toString()}")
-
-        val ctx = ExecuteContext(call)
+    fun adCreate(invoke: Invoke) {
+        val ctx = ExecuteContext(invoke)
         android.os.Handler(activity.mainLooper).post {
-            println("adCreate 2 ${call.parseArgs(InvokeArgs::class.java).ctx} ${call.parseArgs(JSObject::class.java).toString()}")
-
             val adClass = ctx.optString("cls")
             if (adClass == null) {
                 ctx.reject("ad cls is missing")

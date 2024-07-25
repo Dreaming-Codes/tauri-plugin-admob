@@ -42,7 +42,8 @@ class ExecuteContext internal constructor(private val call: Invoke) : Context {
 
     private fun getProperty(args: InvokeArgs, name: String): Any? {
         return when (name) {
-            "ctx" -> args.ctx
+            "id" -> args.id
+            "cls" -> args.cls
             "adUnitId" -> args.adUnitId
             "appMuted" -> args.appMuted
             "appVolume" -> args.appVolume
@@ -61,10 +62,12 @@ class ExecuteContext internal constructor(private val call: Invoke) : Context {
     }
 
     override fun has(name: String): Boolean {
+        println("has: $name, ${getProperty(getData(), name)}")
         return getProperty(getData(), name) != null
     }
 
     override fun opt(name: String): Any? {
+        println("opt: $name, ${getProperty(getData(), name)}")
         return getProperty(getData(), name)
     }
 

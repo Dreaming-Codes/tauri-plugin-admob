@@ -1,6 +1,6 @@
 <script lang="ts">
     import Greet from './lib/Greet.svelte'
-    import {BannerAd} from "tauri-plugin-admob-api";
+    import {BannerAd, InterstitialAd} from "tauri-plugin-admob-api";
 
     let response = ''
 
@@ -10,8 +10,9 @@
 
     async function _ping() {
         const banner = new BannerAd({
-            adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+            adUnitId: 'ca-app-pub-3940256099942544/9214589741',
         });
+        await banner.load();
         await banner.show();
     }
 </script>

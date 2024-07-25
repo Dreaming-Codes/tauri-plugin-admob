@@ -36,7 +36,7 @@ class Banner(ctx: ExecuteContext) : AdBase(ctx), GenericAd {
         if (adView == null) {
             adView = AdView(activity)
             adView!!.adUnitId = adUnitId
-            // adView!!.adSize = adSize
+            adView!!.setAdSize(adSize)
             adView!!.adListener = object : AdListener() {
                 override fun onAdClicked() {
                     emit(Generated.Events.BANNER_CLICK)
@@ -64,7 +64,7 @@ class Banner(ctx: ExecuteContext) : AdBase(ctx), GenericAd {
             }
         }
         adView!!.loadAd(ctx!!.optAdRequest())
-        ctx.resolve()
+        ctx?.resolve()
     }
 
     override fun show(ctx: Context?) {
