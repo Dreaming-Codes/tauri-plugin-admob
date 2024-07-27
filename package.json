@@ -18,9 +18,10 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "prepublishOnly": "yarn build",
-    "pretest": "yarn build",
-    "tauri": "tauri"
+    "prepublishOnly": "bun run build",
+    "pretest": "bun run build",
+    "tauri": "tauri",
+    "postinstall": "bun run build"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.0.0-beta.15"
