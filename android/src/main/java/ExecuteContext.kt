@@ -105,7 +105,9 @@ class ExecuteContext internal constructor(private val call: Invoke) : Context {
 
     override fun resolve(data: Boolean) {
         try {
-            call.resolve(JSObject("true"))
+            call.resolve(JSObject().apply {
+                put("data", data)
+            })
         } catch (e: JSONException) {
             e.printStackTrace()
             reject()
