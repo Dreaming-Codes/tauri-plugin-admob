@@ -2,7 +2,7 @@ import {invoke} from '@tauri-apps/api/core'
 
 export class MobileAd<T extends MobileAdOptions = MobileAdOptions> {
     private static allAdds: { [s: number]: MobileAd } = {};
-    private static idCounter = 0;
+    private static idCounter = 1;
 
     public readonly id: number;
 
