@@ -11,6 +11,8 @@ Default permissions for the plugin
 - `allow-configure`
 - `allow-requestTrackingAuthorization`
 - `allow-trackingAuthorizationStatus`
+- `allow-isPrivacyOptionsRequired`
+- ``
 
 ### Permission Table 
 
