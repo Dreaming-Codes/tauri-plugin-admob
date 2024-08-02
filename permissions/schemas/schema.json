@@ -393,6 +393,20 @@
           ]
         },
         {
+          "description": "allow-isPrivacyOptionsRequired -> Enables the isPrivacyOptionsRequired command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-isPrivacyOptionsRequired"
+          ]
+        },
+        {
+          "description": "deny-isPrivacyOptionsRequired -> Denies the isPrivacyOptionsRequired command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-isPrivacyOptionsRequired"
+          ]
+        },
+        {
           "description": "allow-requestTrackingAuthorization -> Enables the requestTrackingAuthorization command without any pre-configured scope.",
           "type": "string",
           "enum": [
@@ -404,6 +418,20 @@
           "type": "string",
           "enum": [
             "deny-requestTrackingAuthorization"
+          ]
+        },
+        {
+          "description": "allow-showPrivacyOptionsForm -> Enables the showPrivacyOptionsForm command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-showPrivacyOptionsForm"
+          ]
+        },
+        {
+          "description": "deny-showPrivacyOptionsForm -> Denies the showPrivacyOptionsForm command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-showPrivacyOptionsForm"
           ]
         },
         {

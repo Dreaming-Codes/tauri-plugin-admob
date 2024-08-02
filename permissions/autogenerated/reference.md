@@ -206,6 +206,32 @@ Denies the configure command without any pre-configured scope.
 <tr>
 <td>
 
+`admob:allow-isPrivacyOptionsRequired`
+
+</td>
+<td>
+
+Enables the isPrivacyOptionsRequired command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-isPrivacyOptionsRequired`
+
+</td>
+<td>
+
+Denies the isPrivacyOptionsRequired command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
 `admob:allow-requestTrackingAuthorization`
 
 </td>
@@ -225,6 +251,32 @@ Enables the requestTrackingAuthorization command without any pre-configured scop
 <td>
 
 Denies the requestTrackingAuthorization command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-showPrivacyOptionsForm`
+
+</td>
+<td>
+
+Enables the showPrivacyOptionsForm command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-showPrivacyOptionsForm`
+
+</td>
+<td>
+
+Denies the showPrivacyOptionsForm command without any pre-configured scope.
 
 </td>
 </tr>

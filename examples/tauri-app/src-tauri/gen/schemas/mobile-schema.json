@@ -228,10 +228,24 @@
           ]
         },
         {
+          "description": "admob:allow-isPrivacyOptionsRequired -> Enables the isPrivacyOptionsRequired command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:allow-isPrivacyOptionsRequired"
+          ]
+        },
+        {
           "description": "admob:allow-requestTrackingAuthorization -> Enables the requestTrackingAuthorization command without any pre-configured scope.",
           "type": "string",
           "enum": [
             "admob:allow-requestTrackingAuthorization"
+          ]
+        },
+        {
+          "description": "admob:allow-showPrivacyOptionsForm -> Enables the showPrivacyOptionsForm command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:allow-showPrivacyOptionsForm"
           ]
         },
         {
@@ -291,10 +305,24 @@
           ]
         },
         {
+          "description": "admob:deny-isPrivacyOptionsRequired -> Denies the isPrivacyOptionsRequired command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-isPrivacyOptionsRequired"
+          ]
+        },
+        {
           "description": "admob:deny-requestTrackingAuthorization -> Denies the requestTrackingAuthorization command without any pre-configured scope.",
           "type": "string",
           "enum": [
             "admob:deny-requestTrackingAuthorization"
+          ]
+        },
+        {
+          "description": "admob:deny-showPrivacyOptionsForm -> Denies the showPrivacyOptionsForm command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "admob:deny-showPrivacyOptionsForm"
           ]
         },
         {
