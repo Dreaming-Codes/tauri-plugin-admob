@@ -1,5 +1,13 @@
 import {invoke} from '@tauri-apps/api/core'
 
+export async function isPrivacyOptionsRequired(): Promise<boolean> {
+    return (await invoke<{isPrivacyOptionsRequired: boolean}>('plugin:admob|isPrivacyOptionsRequired')).isPrivacyOptionsRequired
+}
+
+export async function showPrivacyOptionsForm(): Promise<void> {
+    await invoke('plugin:admob|showPrivacyOptionsForm')
+}
+
 export class MobileAd<T extends MobileAdOptions = MobileAdOptions> {
     private static allAdds: { [s: number]: MobileAd } = {};
     private static idCounter = 0;

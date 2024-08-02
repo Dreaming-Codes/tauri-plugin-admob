@@ -1,6 +1,8 @@
 package com.plugin.admob
 
 import android.app.Activity
+import android.content.ContentValues.TAG
+import android.util.Log
 import android.webkit.WebView
 import app.tauri.annotation.Command
 import app.tauri.annotation.InvokeArg
@@ -10,6 +12,9 @@ import app.tauri.plugin.Plugin
 import app.tauri.plugin.Invoke
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.initialization.InitializationStatus
+import com.google.android.ump.ConsentInformation
+import com.google.android.ump.ConsentRequestParameters
+import com.google.android.ump.UserMessagingPlatform
 import com.plugin.admob.ads.Banner
 import com.plugin.admob.ads.Interstitial
 import com.plugin.admob.ads.Rewarded
@@ -40,6 +45,11 @@ class InvokeArgs {
 
 @TauriPlugin
 class AdmobPlugin(var activity: Activity) : Plugin(activity) {
+    private lateinit var consentInformation: ConsentInformation
+    val isPrivacyOptionsRequired: Boolean
+        get() =
+            consentInformation.privacyOptionsRequirementStatus ==
+                    ConsentInformation.PrivacyOptionsRequirementStatus.REQUIRED
     private var helper: Helper? = null
     var webView: WebView? = null
 
@@ -51,6 +61,51 @@ class AdmobPlugin(var activity: Activity) : Plugin(activity) {
 
         MobileAds.initialize(activity.baseContext) { status: InitializationStatus? ->
             helper!!.configForTestLab()
+        }
+
+        val params = ConsentRequestParameters
+            .Builder()
+            .build()
+
+        consentInformation = UserMessagingPlatform.getConsentInformation(this.activity)
+        consentInformation.requestConsentInfoUpdate(
+            this.activity,
+            params,
+            {
+                UserMessagingPlatform.loadAndShowConsentFormIfRequired(
+                    this.activity
+                ) { loadAndShowError ->
+                    if (loadAndShowError != null) {
+                        Log.w(TAG, "${loadAndShowError.errorCode}: ${loadAndShowError.message}")
+                        return@loadAndShowConsentFormIfRequired
+                    }
+                }
+            },
+            {
+                    requestConsentError ->
+                Log.w(TAG, "${requestConsentError.errorCode}: ${requestConsentError.message}")
+            }
+        )
+    }
+
+    @Command
+    fun isPrivacyOptionsRequired(call: Invoke) {
+        try {
+            call.resolve(JSObject("{\"isPrivacyOptionsRequired\": ${isPrivacyOptionsRequired}}"))
+        } catch (ex: JSONException) {
+            call.reject(ex.toString())
+        }
+    }
+
+    @Command
+    fun showPrivacyOptionsForm(invoke: Invoke) {
+        UserMessagingPlatform.showPrivacyOptionsForm(this.activity) { formError ->
+            if (formError != null) {
+                Log.w(TAG, "${formError.errorCode}: ${formError.message}")
+                invoke.reject(formError.message)
+                return@showPrivacyOptionsForm
+            }
+            invoke.resolve()
         }
     }
 

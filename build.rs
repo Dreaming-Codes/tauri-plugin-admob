@@ -1,4 +1,4 @@
-const COMMANDS: &[&str] = &["trackingAuthorizationStatus", "requestTrackingAuthorization", "configure", "configRequest", "adCreate", "adIsLoaded", "adLoad", "adShow", "adHide"];
+const COMMANDS: &[&str] = &["trackingAuthorizationStatus", "requestTrackingAuthorization", "configure", "configRequest", "adCreate", "adIsLoaded", "adLoad", "adShow", "adHide", "isPrivacyOptionsRequired", "showPrivacyOptionsForm"];
 
 fn main() {
   tauri_plugin::Builder::new(COMMANDS)
