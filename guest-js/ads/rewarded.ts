@@ -1,6 +1,6 @@
-import {MobileAd} from "./common";
+import {MobileAd, MobileAdOptions} from "./common";
 
-export class RewardedAd extends MobileAd {
+export class RewardedAd extends MobileAd<RewardedAdOptions> {
     static cls = 'RewardedAd'
 
     isLoaded() {
@@ -14,4 +14,28 @@ export class RewardedAd extends MobileAd {
     async show() {
         return super.show()
     }
+}
+
+export class RewardedInterstitialAd extends MobileAd<RewardedAdOptions> {
+    static cls = 'RewardedInterstitialAd'
+
+    isLoaded() {
+        return super.isLoaded()
+    }
+
+    async load() {
+        return super.load()
+    }
+
+    async show() {
+        return super.show()
+    }
+}
+
+
+export interface RewardedAdOptions extends MobileAdOptions {
+    serverSideVerification?: {
+        userId?: string;
+        customData?: string;
+    };
 }

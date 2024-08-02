@@ -15,19 +15,3 @@ export class InterstitialAd extends MobileAd {
         return super.show()
     }
 }
-
-export class RewardedInterstitialAd extends MobileAd {
-    static cls = 'RewardedInterstitialAd'
-
-    isLoaded() {
-        return super.isLoaded()
-    }
-
-    async load() {
-        return super.load()
-    }
-
-    async show() {
-        return super.show()
-    }
-}
