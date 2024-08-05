@@ -34,7 +34,7 @@ class Rewarded(ctx: ExecuteContext?) : AdBase(ctx), GenericAd {
                 override fun onAdLoaded(rewardedAd: RewardedAd) {
                     mAd = rewardedAd
                     val ssv = ctx.optServerSideVerificationOptions()
-                    println("Loaded rewarded ad, ssv: $ssv")
+                    println("Loaded rewarded ad, ssv userId: ${ssv?.userId}")
                     if (ssv != null) {
                         mAd!!.setServerSideVerificationOptions(ssv)
                     }
