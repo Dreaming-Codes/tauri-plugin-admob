@@ -61,6 +61,10 @@ class ExecuteContext internal constructor(private val call: Invoke) : Context {
         }
     }
 
+    override fun getInvokeArgs(): InvokeArgs {
+        return getData()
+    }
+
     override fun has(name: String): Boolean {
         println("has: $name, ${getProperty(getData(), name)}")
         return getProperty(getData(), name) != null

@@ -38,9 +38,15 @@ class InvokeArgs {
     val tagForChildDirectedTreatment: Boolean? = null
     val tagForUnderAgeOfConsent: Boolean? = null
     val testDeviceIds: List<String?>? = null
-    val serverSideVerification: JSObject? = null
+    val serverSideVerification: ServerSideVerification? = null
     val customData: String? = null
     val userId: String? = null
+}
+
+@InvokeArg
+class ServerSideVerification {
+    var userId: String? = null
+    var customData: String? = null
 }
 
 @TauriPlugin

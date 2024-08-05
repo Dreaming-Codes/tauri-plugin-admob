@@ -7,6 +7,7 @@ import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.RequestConfiguration
 import com.google.android.gms.ads.rewarded.ServerSideVerificationOptions
+import com.plugin.admob.InvokeArgs
 import org.json.JSONObject
 import java.util.Objects
 
@@ -18,6 +19,8 @@ interface Context {
     fun optDouble(name: String, defaultValue: Double): Double {
         return optDouble(name) ?: return defaultValue
     }
+
+    fun getInvokeArgs(): InvokeArgs
 
     fun optFloat(name: String): Float? {
         val v = optDouble(name) ?: return null
@@ -113,14 +116,14 @@ interface Context {
     }
 
     fun optServerSideVerificationOptions(): ServerSideVerificationOptions? {
-        val param = "serverSideVerification"
-        val serverSideVerification = optObject(param) ?: return null
+        val param = this.getInvokeArgs();
+        val serverSideVerification = param.serverSideVerification ?: return null
         val builder = ServerSideVerificationOptions.Builder()
-        if (serverSideVerification.has("customData")) {
-            builder.setCustomData(serverSideVerification.optString("customData"))
+        if (serverSideVerification.customData != null) {
+            builder.setCustomData(serverSideVerification.customData!!)
         }
-        if (serverSideVerification.has("userId")) {
-            builder.setUserId(serverSideVerification.optString("userId"))
+        if (serverSideVerification.userId != null) {
+            builder.setUserId(serverSideVerification.userId!!)
         }
         return builder.build()
     }
