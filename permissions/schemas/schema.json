@@ -407,6 +407,20 @@
           ]
         },
         {
+          "description": "allow-register-listener -> Enables the register_listener command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "allow-register-listener"
+          ]
+        },
+        {
+          "description": "deny-register-listener -> Denies the register_listener command without any pre-configured scope.",
+          "type": "string",
+          "enum": [
+            "deny-register-listener"
+          ]
+        },
+        {
           "description": "allow-requestTrackingAuthorization -> Enables the requestTrackingAuthorization command without any pre-configured scope.",
           "type": "string",
           "enum": [

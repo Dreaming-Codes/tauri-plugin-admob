@@ -12,9 +12,9 @@ Default permissions for the plugin
 - `allow-requestTrackingAuthorization`
 - `allow-trackingAuthorizationStatus`
 - `allow-isPrivacyOptionsRequired`
-- ``
+- `allow-showPrivacyOptionsForm`
 
-### Permission Table 
+## Permission Table 
 
 <table>
 <tr>
@@ -227,6 +227,32 @@ Enables the isPrivacyOptionsRequired command without any pre-configured scope.
 <td>
 
 Denies the isPrivacyOptionsRequired command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:allow-register-listener`
+
+</td>
+<td>
+
+Enables the register_listener command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`admob:deny-register-listener`
+
+</td>
+<td>
+
+Denies the register_listener command without any pre-configured scope.
 
 </td>
 </tr>
