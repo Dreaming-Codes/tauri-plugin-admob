@@ -14,7 +14,7 @@ Default permissions for the plugin
 - `allow-isPrivacyOptionsRequired`
 - `allow-showPrivacyOptionsForm`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>
