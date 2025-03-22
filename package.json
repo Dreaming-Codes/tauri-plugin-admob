@@ -19,6 +19,7 @@
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "bun run build",
+    "postinstall": "npm run build",
     "pretest": "bun run build",
     "tauri": "tauri"
   },
