@@ -15,10 +15,13 @@
 	"files": ["dist-js", "README.md"],
 	"scripts": {
 		"build": "rollup -c",
-		"prepublishOnly": "bun run build",
-		"pretest": "bun run build",
+		"prepublishOnly": "bun run check && bun run build",
+		"pretest": "bun run check",
 		"tauri": "tauri",
-		"biome": "biome"
+		"biome": "biome",
+		"format": "biome format",
+		"lint": "biome lint",
+		"check": "biome check"
 	},
 	"dependencies": {
 		"@tauri-apps/api": "^2.0.0-beta.15"
