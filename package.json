@@ -14,11 +14,12 @@
 	},
 	"files": ["dist-js", "README.md"],
 	"scripts": {
-		"build": "rollup -c",
+		"build": "rolldown -c",
 		"prepublishOnly": "bun run check && bun run build",
 		"pretest": "bun run check",
 		"tauri": "tauri",
 		"biome": "biome",
+		"rolldown": "rolldown",
 		"format": "biome format",
 		"lint": "biome lint",
 		"check": "biome check"
@@ -30,7 +31,7 @@
 		"@biomejs/biome": "1.9.4",
 		"@rollup/plugin-typescript": "^11.1.6",
 		"@tauri-apps/cli": "next",
-		"rollup": "^4.18.1",
+		"rolldown": "^1.0.0-beta.6",
 		"tslib": "^2.6.3",
 		"typescript": "^5.5.3"
 	}

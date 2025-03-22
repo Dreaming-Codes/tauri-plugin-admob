@@ -1,11 +1,12 @@
-import { readFileSync } from "node:fs";
+import { defineConfig } from 'rolldown'
 import { join } from "node:path";
 import { cwd } from "node:process";
 import typescript from "@rollup/plugin-typescript";
+import {readFileSync} from "fs"
 
 const pkg = JSON.parse(readFileSync(join(cwd(), "package.json"), "utf8"));
 
-export default {
+export default defineConfig({
 	input: "guest-js/index.ts",
 	output: [
 		{
@@ -28,4 +29,4 @@ export default {
 		...Object.keys(pkg.dependencies || {}),
 		...Object.keys(pkg.peerDependencies || {}),
 	],
-};
+});
