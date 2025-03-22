@@ -2,6 +2,8 @@
 
 > For now this is just a copy of [admob-plus](https://github.com/admob-plus/admob-plus) in the future I would like to refactor the code to be more Tauri friendly.
 
+> The plugin currently only supports android. If you want iOS support, please feel free to create a pull request
+
 ## How to install
 
 Since this plugin is yet not published to crates.io or npm registery, we can install it using github link directly.
@@ -11,6 +13,8 @@ Since this plugin is yet not published to crates.io or npm registery, we can ins
 ```bash
 npm i https://github.com/Dreaming-Codes/tauri-plugin-admob.git
 ```
+
+> You might need to update your tauri version to "2.4.0" or more
 
 2. Inside your `src-tauri` directory run this command
 
