@@ -64,9 +64,7 @@ const showBanner = async () => {
     adUnitId: "ca-app-pub-3940256099942544/9214589741",
     position: "bottom",
   });
-  if (!(await banner.isLoaded())) {
-    await banner.load();
-  }
+  await banner.load();
   await banner.show();
 };
 ```
