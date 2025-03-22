@@ -14,7 +14,7 @@ yarn.lock
 Cargo.lock
 node_modules/
 
-dist-js
+# dist-js
 dist
 
 # Project exclude paths
