@@ -15,7 +15,7 @@ Cargo.lock
 node_modules/
 
 # Added this directory to the git repo, bcz the plugin is not published yet to any registery
-# dist-js
+dist-js
 dist
 
 # Project exclude paths
