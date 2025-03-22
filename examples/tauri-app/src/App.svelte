@@ -1,23 +1,25 @@
 <script lang="ts">
-    import Greet from './lib/Greet.svelte'
-    import {BannerAd, InterstitialAd} from "tauri-plugin-admob-api";
+import { BannerAd, InterstitialAd } from "tauri-plugin-admob-api";
+import Greet from "./lib/Greet.svelte";
 
-    let response = ''
+let response = "";
 
-    function updateResponse(returnValue) {
-        response += `[${new Date().toLocaleTimeString()}] ` + (typeof returnValue === 'string' ? returnValue : JSON.stringify(returnValue)) + '<br>'
-    }
+function updateResponse(returnValue) {
+	response += `[${new Date().toLocaleTimeString()}] ${
+		typeof returnValue === "string" ? returnValue : JSON.stringify(returnValue)
+	}<br>`;
+}
 
-    async function _ping() {
-        const banner = new BannerAd({
-            adUnitId: 'ca-app-pub-3940256099942544/9214589741',
-            position: 'top',
-        });
-        if (!(await banner.isLoaded())){
-            await banner.load();
-        }
-        await banner.show();
-    }
+async function _ping() {
+	const banner = new BannerAd({
+		adUnitId: "ca-app-pub-3940256099942544/9214589741",
+		position: "top",
+	});
+	if (!(await banner.isLoaded())) {
+		await banner.load();
+	}
+	await banner.show();
+}
 </script>
 
 <main class="container">

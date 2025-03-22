@@ -1,37 +1,37 @@
-import {MobileAd, MobileAdOptions} from "./common";
+import { MobileAd, type MobileAdOptions } from "./common";
 
 export class BannerAd extends MobileAd<BannerAdOptions> {
-    static cls = 'BannerAd';
-    #loaded = false;
+	static cls = "BannerAd";
+	#loaded = false;
 
-    constructor(opts: BannerAdOptions) {
-        super({
-            position: 'bottom',
-            ...opts,
-        })
-    }
+	constructor(opts: BannerAdOptions) {
+		super({
+			position: "bottom",
+			...opts,
+		});
+	}
 
-    isLoaded() {
-        return super.isLoaded();
-    }
+	isLoaded() {
+		return super.isLoaded();
+	}
 
-    async load() {
-        await super.load();
-        this.#loaded = true;
-    }
+	async load() {
+		await super.load();
+		this.#loaded = true;
+	}
 
-    async show() {
-        if (!this.#loaded) await this.load();
-        await super.show();
-    }
+	async show() {
+		if (!this.#loaded) await this.load();
+		await super.show();
+	}
 
-    hide() {
-        return super.hide();
-    }
+	hide() {
+		return super.hide();
+	}
 }
 
-export type BannerPosition = 'top' | 'bottom';
+export type BannerPosition = "top" | "bottom";
 
 export interface BannerAdOptions extends MobileAdOptions {
-    position?: BannerPosition;
+	position?: BannerPosition;
 }
