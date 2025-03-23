@@ -44,7 +44,7 @@ jobs:
         run: |
           git fetch origin
           CURRENT_VERSION=$(grep -m 1 "version = " Cargo.toml | sed 's/version = //; s/"//g')
-          PREVIOUS_VERSION=$(git show origin/master:Cargo.toml | grep -m 1 "version = " | sed 's/version = //; s/"//g')
+          PREVIOUS_VERSION=$(git show HEAD~1:Cargo.toml | grep -m 1 "version = " | sed 's/version = //; s/"//g')
           
           if [ "$CURRENT_VERSION" != "$PREVIOUS_VERSION" ]; then
             echo "version_changed=true" >> $GITHUB_OUTPUT
@@ -82,7 +82,7 @@ jobs:
         run: |
           git fetch origin
           CURRENT_VERSION=$(grep -m 1 '"version":' package.json | sed 's/.*"version": "//; s/".*//')
-          PREVIOUS_VERSION=$(git show origin/master:package.json | grep -m 1 '"version":' | sed 's/.*"version": "//; s/".*//')
+          PREVIOUS_VERSION=$(git show HEAD~1:package.json | grep -m 1 '"version":' | sed 's/.*"version": "//; s/".*//')
           
           if [ "$CURRENT_VERSION" != "$PREVIOUS_VERSION" ]; then
             echo "version_changed=true" >> $GITHUB_OUTPUT
