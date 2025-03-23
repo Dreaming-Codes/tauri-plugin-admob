@@ -1,6 +1,6 @@
  [package]
 name = "tauri-plugin-admob"
-version = "0.0.0"
+version = "0.0.4"
 authors = [ "You" ]
 description = ""
 edition = "2021"
