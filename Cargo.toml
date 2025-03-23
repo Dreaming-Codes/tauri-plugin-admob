@@ -2,7 +2,8 @@
 name = "tauri-plugin-admob"
 version = "0.0.4"
 authors = [ "You" ]
-description = ""
+description = "Tauri Plugin admob"
+license = "MIT"
 edition = "2021"
 rust-version = "1.70"
 exclude = ["/examples", "/dist-js", "/guest-js", "/node_modules"]
