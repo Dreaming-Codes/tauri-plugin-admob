@@ -2,9 +2,27 @@
 
 > For now this is just a copy of [admob-plus](https://github.com/admob-plus/admob-plus) in the future I would like to refactor the code to be more Tauri friendly.
 
-### How to install
+> The plugin currently only supports android. If you want iOS support, please feel free to create a pull request
 
-1. Since google library uses different Kotlin version than Tauri you may need to add the following compiler
+## How to install
+
+Since this plugin is yet not published to crates.io or npm registery, we can install it using github link directly.
+
+1. Inside your root directory run this command
+
+```bash
+npm i https://github.com/Dreaming-Codes/tauri-plugin-admob.git
+```
+
+> You might need to update your tauri version to "2.4.0" or more
+
+2. Inside your `src-tauri` directory run this command
+
+```bash
+cargo add tauri-plugin-admob --git https://github.com/Dreaming-Codes/tauri-plugin-admob.git
+```
+
+3. Since google library uses different Kotlin version than Tauri you may need to add the following compiler
    arg: `-Xskip-metadata-version-check`
 
 ```kotlin
@@ -15,7 +33,7 @@ kotlinOptions {
 }
 ```
 
-2. Add your AdMob app ID, as [identified in the AdMob web interface](https://support.google.com/admob/answer/7356431),
+4. Add your AdMob app ID, as [identified in the AdMob web interface](https://support.google.com/admob/answer/7356431),
    to your app's AndroidManifest.xml.
    To do so, add a `<meta-data>` tag with `android:name="com.google.android.gms.ads.APPLICATION_ID"`. You can find your
    **app ID** in the AdMob web interface. For `android:value`, insert your own AdMob app ID, surrounded by quotation
@@ -36,4 +54,19 @@ kotlinOptions {
 </manifest>
 ```
 
-3. Install this plugin as any other Tauri plugin
+## How to use
+
+```ts
+import { BannerAd } from "tauri-plugin-admob-api";
+
+const showBanner = async () => {
+  const banner = new BannerAd({
+    adUnitId: "ca-app-pub-3940256099942544/9214589741",
+    position: "bottom",
+  });
+  await banner.load();
+  await banner.show();
+};
+```
+
+> For more details on how to use it check the documentation of [admob-plus](https://github.com/admob-plus/admob-plus)
