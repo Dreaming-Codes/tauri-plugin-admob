@@ -38,6 +38,27 @@ jobs:
       - name: Run tests
         run: cargo test
 
+      - name: Check if Cargo.toml version changed
+        id: cargo-version-check
+        if: github.ref == 'refs/heads/master'
+        run: |
+          git fetch origin
+          CURRENT_VERSION=$(grep -m 1 "version = " Cargo.toml | sed 's/version = //; s/"//g')
+          PREVIOUS_VERSION=$(git show origin/master:Cargo.toml | grep -m 1 "version = " | sed 's/version = //; s/"//g')
+          
+          if [ "$CURRENT_VERSION" != "$PREVIOUS_VERSION" ]; then
+            echo "version_changed=true" >> $GITHUB_OUTPUT
+            echo "Version changed from $PREVIOUS_VERSION to $CURRENT_VERSION"
+          else
+            echo "version_changed=false" >> $GITHUB_OUTPUT
+            echo "Version unchanged: $CURRENT_VERSION"
+          fi
+      
+      - name: Publish to crates.io
+        if: ${{ github.ref == 'refs/heads/master' && steps.cargo-version-check.outputs.version_changed == 'true' }}
+        run: cargo publish --token ${CARGO_REGISTRY_TOKEN}
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
   bun:
     name: Bun Checks
     runs-on: ubuntu-latest
@@ -54,3 +75,37 @@ jobs:
 
       - name: Run bun check
         run: bun run check
+
+      - name: Check if package.json version changed
+        id: npm-version-check
+        if: github.ref == 'refs/heads/master'
+        run: |
+          git fetch origin
+          CURRENT_VERSION=$(grep -m 1 '"version":' package.json | sed 's/.*"version": "//; s/".*//')
+          PREVIOUS_VERSION=$(git show origin/master:package.json | grep -m 1 '"version":' | sed 's/.*"version": "//; s/".*//')
+          
+          if [ "$CURRENT_VERSION" != "$PREVIOUS_VERSION" ]; then
+            echo "version_changed=true" >> $GITHUB_OUTPUT
+            echo "Version changed from $PREVIOUS_VERSION to $CURRENT_VERSION"
+          else
+            echo "version_changed=false" >> $GITHUB_OUTPUT
+            echo "Version unchanged: $CURRENT_VERSION"
+          fi
+
+      - name: Setup Node.js for npm publishing
+        if: ${{ github.ref == 'refs/heads/master' && steps.npm-version-check.outputs.version_changed == 'true' }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: '23.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Build package
+        if: ${{ github.ref == 'refs/heads/master' && steps.npm-version-check.outputs.version_changed == 'true' }}
+        run: bun run build
+
+      - name: Publish to npm
+        if: ${{ github.ref == 'refs/heads/master' && steps.npm-version-check.outputs.version_changed == 'true' }}
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
