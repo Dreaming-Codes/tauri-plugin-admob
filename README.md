@@ -11,7 +11,7 @@ Since this plugin is yet not published to crates.io or npm registery, we can ins
 1. Inside your root directory run this command
 
 ```bash
-npm i https://github.com/Dreaming-Codes/tauri-plugin-admob.git
+npm i tauri-plugin-admob-api
 ```
 
 > You might need to update your tauri version to "2.4.0" or more
@@ -19,7 +19,7 @@ npm i https://github.com/Dreaming-Codes/tauri-plugin-admob.git
 2. Inside your `src-tauri` directory run this command
 
 ```bash
-cargo add tauri-plugin-admob --git https://github.com/Dreaming-Codes/tauri-plugin-admob.git
+cargo add tauri-plugin-admob
 ```
 
 3. Since google library uses different Kotlin version than Tauri you may need to add the following compiler
