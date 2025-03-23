@@ -1,7 +1,7 @@
 use serde::de::DeserializeOwned;
 use tauri::{
-  plugin::{PluginApi, PluginHandle},
-  AppHandle, Runtime,
+    plugin::{PluginApi, PluginHandle},
+    AppHandle, Runtime,
 };
 
 #[cfg(target_os = "android")]
@@ -12,14 +12,14 @@ tauri::ios_plugin_binding!(init_plugin_admob);
 
 // initializes the Kotlin or Swift plugin classes
 pub fn init<R: Runtime, C: DeserializeOwned>(
-  _app: &AppHandle<R>,
-  api: PluginApi<R, C>,
+    _app: &AppHandle<R>,
+    api: PluginApi<R, C>,
 ) -> crate::Result<Admob<R>> {
-  #[cfg(target_os = "android")]
-  let handle = api.register_android_plugin(PLUGIN_IDENTIFIER, "AdmobPlugin")?;
-  #[cfg(target_os = "ios")]
-  let handle = api.register_ios_plugin(init_plugin_admob)?;
-  Ok(Admob(handle))
+    #[cfg(target_os = "android")]
+    let handle = api.register_android_plugin(PLUGIN_IDENTIFIER, "AdmobPlugin")?;
+    #[cfg(target_os = "ios")]
+    let handle = api.register_ios_plugin(init_plugin_admob)?;
+    Ok(Admob(handle))
 }
 
 /// Access to the admob APIs.
