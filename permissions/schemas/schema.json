@@ -44,7 +44,7 @@
 					"minimum": 1.0
 				},
 				"description": {
-					"description": "Human-readable description of what the permission does. Tauri convention is to use <h4> headings in markdown content for Tauri documentation generation purposes.",
+					"description": "Human-readable description of what the permission does. Tauri convention is to use `<h4>` headings in markdown content for Tauri documentation generation purposes.",
 					"type": ["string", "null"]
 				},
 				"permissions": {
@@ -94,7 +94,7 @@
 					"type": "string"
 				},
 				"description": {
-					"description": "Human-readable description of what the permission does. Tauri internal convention is to use <h4> headings in markdown content for Tauri documentation generation purposes.",
+					"description": "Human-readable description of what the permission does. Tauri internal convention is to use `<h4>` headings in markdown content for Tauri documentation generation purposes.",
 					"type": ["string", "null"]
 				},
 				"commands": {
@@ -256,129 +256,129 @@
 			"type": "string",
 			"oneOf": [
 				{
-					"description": "allow-adCreate -> Enables the adCreate command without any pre-configured scope.",
+					"description": "Enables the adCreate command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-adCreate"]
+					"const": "allow-adCreate"
 				},
 				{
-					"description": "deny-adCreate -> Denies the adCreate command without any pre-configured scope.",
+					"description": "Denies the adCreate command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-adCreate"]
+					"const": "deny-adCreate"
 				},
 				{
-					"description": "allow-adHide -> Enables the adHide command without any pre-configured scope.",
+					"description": "Enables the adHide command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-adHide"]
+					"const": "allow-adHide"
 				},
 				{
-					"description": "deny-adHide -> Denies the adHide command without any pre-configured scope.",
+					"description": "Denies the adHide command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-adHide"]
+					"const": "deny-adHide"
 				},
 				{
-					"description": "allow-adIsLoaded -> Enables the adIsLoaded command without any pre-configured scope.",
+					"description": "Enables the adIsLoaded command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-adIsLoaded"]
+					"const": "allow-adIsLoaded"
 				},
 				{
-					"description": "deny-adIsLoaded -> Denies the adIsLoaded command without any pre-configured scope.",
+					"description": "Denies the adIsLoaded command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-adIsLoaded"]
+					"const": "deny-adIsLoaded"
 				},
 				{
-					"description": "allow-adLoad -> Enables the adLoad command without any pre-configured scope.",
+					"description": "Enables the adLoad command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-adLoad"]
+					"const": "allow-adLoad"
 				},
 				{
-					"description": "deny-adLoad -> Denies the adLoad command without any pre-configured scope.",
+					"description": "Denies the adLoad command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-adLoad"]
+					"const": "deny-adLoad"
 				},
 				{
-					"description": "allow-adShow -> Enables the adShow command without any pre-configured scope.",
+					"description": "Enables the adShow command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-adShow"]
+					"const": "allow-adShow"
 				},
 				{
-					"description": "deny-adShow -> Denies the adShow command without any pre-configured scope.",
+					"description": "Denies the adShow command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-adShow"]
+					"const": "deny-adShow"
 				},
 				{
-					"description": "allow-configRequest -> Enables the configRequest command without any pre-configured scope.",
+					"description": "Enables the configRequest command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-configRequest"]
+					"const": "allow-configRequest"
 				},
 				{
-					"description": "deny-configRequest -> Denies the configRequest command without any pre-configured scope.",
+					"description": "Denies the configRequest command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-configRequest"]
+					"const": "deny-configRequest"
 				},
 				{
-					"description": "allow-configure -> Enables the configure command without any pre-configured scope.",
+					"description": "Enables the configure command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-configure"]
+					"const": "allow-configure"
 				},
 				{
-					"description": "deny-configure -> Denies the configure command without any pre-configured scope.",
+					"description": "Denies the configure command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-configure"]
+					"const": "deny-configure"
 				},
 				{
-					"description": "allow-isPrivacyOptionsRequired -> Enables the isPrivacyOptionsRequired command without any pre-configured scope.",
+					"description": "Enables the isPrivacyOptionsRequired command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-isPrivacyOptionsRequired"]
+					"const": "allow-isPrivacyOptionsRequired"
 				},
 				{
-					"description": "deny-isPrivacyOptionsRequired -> Denies the isPrivacyOptionsRequired command without any pre-configured scope.",
+					"description": "Denies the isPrivacyOptionsRequired command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-isPrivacyOptionsRequired"]
+					"const": "deny-isPrivacyOptionsRequired"
 				},
 				{
-					"description": "allow-register-listener -> Enables the register_listener command without any pre-configured scope.",
+					"description": "Enables the register_listener command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-register-listener"]
+					"const": "allow-register-listener"
 				},
 				{
-					"description": "deny-register-listener -> Denies the register_listener command without any pre-configured scope.",
+					"description": "Denies the register_listener command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-register-listener"]
+					"const": "deny-register-listener"
 				},
 				{
-					"description": "allow-requestTrackingAuthorization -> Enables the requestTrackingAuthorization command without any pre-configured scope.",
+					"description": "Enables the requestTrackingAuthorization command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-requestTrackingAuthorization"]
+					"const": "allow-requestTrackingAuthorization"
 				},
 				{
-					"description": "deny-requestTrackingAuthorization -> Denies the requestTrackingAuthorization command without any pre-configured scope.",
+					"description": "Denies the requestTrackingAuthorization command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-requestTrackingAuthorization"]
+					"const": "deny-requestTrackingAuthorization"
 				},
 				{
-					"description": "allow-showPrivacyOptionsForm -> Enables the showPrivacyOptionsForm command without any pre-configured scope.",
+					"description": "Enables the showPrivacyOptionsForm command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-showPrivacyOptionsForm"]
+					"const": "allow-showPrivacyOptionsForm"
 				},
 				{
-					"description": "deny-showPrivacyOptionsForm -> Denies the showPrivacyOptionsForm command without any pre-configured scope.",
+					"description": "Denies the showPrivacyOptionsForm command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-showPrivacyOptionsForm"]
+					"const": "deny-showPrivacyOptionsForm"
 				},
 				{
-					"description": "allow-trackingAuthorizationStatus -> Enables the trackingAuthorizationStatus command without any pre-configured scope.",
+					"description": "Enables the trackingAuthorizationStatus command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["allow-trackingAuthorizationStatus"]
+					"const": "allow-trackingAuthorizationStatus"
 				},
 				{
-					"description": "deny-trackingAuthorizationStatus -> Denies the trackingAuthorizationStatus command without any pre-configured scope.",
+					"description": "Denies the trackingAuthorizationStatus command without any pre-configured scope.",
 					"type": "string",
-					"enum": ["deny-trackingAuthorizationStatus"]
+					"const": "deny-trackingAuthorizationStatus"
 				},
 				{
-					"description": "default -> Default permissions for the plugin",
+					"description": "Default permissions for the plugin",
 					"type": "string",
-					"enum": ["default"]
+					"const": "default"
 				}
 			]
 		}
